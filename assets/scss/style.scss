@@ -1,0 +1,101 @@
+// =============== 
+// Calculator
+// ==============
+
+@font-face {
+    font-family: 'font-m', sans-serif;
+    src: url(../fonts/HelveticaNeueLT65Medium.woff);
+}
+
+@font-face {
+    font-family: 'font-b', sans-serif;
+    src: url(../fonts/HelveticaNeueLT75Bold.woff);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'font-b', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    min-height: calc(100vh - 80px);
+}
+
+.container {
+    width: 620px;
+    height: 500px;
+    background-color: #8DCFED;
+    padding: 40px;
+    border-radius: 8px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-gap: 20px 15px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+
+    .display {
+        grid-column: 2 / 5;
+        background-color: #78A7BB;
+        height: 100%;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 28px;
+        padding: 0 15px;
+        box-shadow: 0 -8px 0 #618698;
+        margin-top: 8px;
+        color: #fff;
+        letter-spacing: 1px;
+        overflow: hidden;
+    }
+
+    button {
+        border: 0;
+        font-size: 28px;
+        cursor: pointer;
+        border-radius: 8px;
+        box-shadow: 0 8px 0 #78A7BB;
+        color: #81898E;
+        font-weight: bold;
+
+        &.active {
+            box-shadow: 0 4px 0 #78A7BB;
+            transform: translateY(4px);
+        }
+
+        &.operator {
+            background-color: #FFF0F5;
+            box-shadow: 0 8px 0  #78A7BB;
+
+            &.active {
+                box-shadow: 0 4px 0 #78A7BB;
+                transform: translateY(4px);
+            }
+        }
+
+        &.equal {
+            background-color: #F1FF8B;
+            box-shadow: 0 8px 0 #9CAB44;
+
+            &.active {
+                box-shadow: 0 4px 0 #9CAB44;
+                transform: translateY(4px);
+            }
+        }
+
+        &.clear {
+            background-color: #FF9FA7;
+            color: #fff;
+
+            &.active {
+                box-shadow: 0 4px 0 #78A7BB;
+                transform: translateY(4px);
+            }
+        }
+    }
+
+}

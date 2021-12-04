@@ -1,0 +1,125 @@
+@font-face {
+  font-family: 'font-m', sans-serif;
+  src: url(../fonts/HelveticaNeueLT65Medium.woff);
+}
+
+@font-face {
+  font-family: 'font-b', sans-serif;
+  src: url(../fonts/HelveticaNeueLT75Bold.woff);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'font-b', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px;
+  min-height: calc(100vh - 80px);
+}
+
+.container {
+  width: 620px;
+  height: 500px;
+  background-color: #8DCFED;
+  padding: 40px;
+  border-radius: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px 15px;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+}
+
+.container .display {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 3;
+  grid-column: 2 / 5;
+  background-color: #78A7BB;
+  height: 100%;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 28px;
+  padding: 0 15px;
+  -webkit-box-shadow: 0 -8px 0 #618698;
+          box-shadow: 0 -8px 0 #618698;
+  margin-top: 8px;
+  color: #fff;
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+
+.container button {
+  border: 0;
+  font-size: 28px;
+  cursor: pointer;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 8px 0 #78A7BB;
+          box-shadow: 0 8px 0 #78A7BB;
+  color: #81898E;
+  font-weight: bold;
+}
+
+.container button.active {
+  -webkit-box-shadow: 0 4px 0 #78A7BB;
+          box-shadow: 0 4px 0 #78A7BB;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.container button.operator {
+  background-color: #FFF0F5;
+  -webkit-box-shadow: 0 8px 0  #78A7BB;
+          box-shadow: 0 8px 0  #78A7BB;
+}
+
+.container button.operator.active {
+  -webkit-box-shadow: 0 4px 0 #78A7BB;
+          box-shadow: 0 4px 0 #78A7BB;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.container button.equal {
+  background-color: #F1FF8B;
+  -webkit-box-shadow: 0 8px 0 #9CAB44;
+          box-shadow: 0 8px 0 #9CAB44;
+}
+
+.container button.equal.active {
+  -webkit-box-shadow: 0 4px 0 #9CAB44;
+          box-shadow: 0 4px 0 #9CAB44;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.container button.clear {
+  background-color: #FF9FA7;
+  color: #fff;
+}
+
+.container button.clear.active {
+  -webkit-box-shadow: 0 4px 0 #78A7BB;
+          box-shadow: 0 4px 0 #78A7BB;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
